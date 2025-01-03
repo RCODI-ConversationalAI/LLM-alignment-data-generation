@@ -1,8 +1,8 @@
 # LLM-alignment-data-generation
 
-# AIM 3.2.1: LLM Alignment with Empathy using RLHF
+## AIM 3.2.1: LLM Alignment with Empathy using RLHF
 
-## Model Version 1
+### Model Version 1
 
 This model improves upon the foundation model by applying 4 computational rules (voice, tense, pronoun, mood) and augmenting data size.
 ### Domains
