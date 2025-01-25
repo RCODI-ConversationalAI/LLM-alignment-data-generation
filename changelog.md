@@ -16,10 +16,10 @@
 - [**Models Tested**](https://github.com/ninackjeong/LLM-alignment-data-generation/blob/main/scripts/counsel-gpt-family.ipynb):
   - [GPT-4 (gpt-4)](https://github.com/ninackjeong/LLM-alignment-data-generation/tree/main/generated-data/counsel-chat/GPT-4/test-phase1)
 
-## Discussion items (updated on Jan 15)
+## Discussion items (updated on Jan 24)
 - **Discussion**:
   - Imperatives seem unnatural as responses to wh-questions.
-  - Granted, if we decide to use this, control for imperatives vs. polite imperatives; controlled for counseling data generation, will do it again with legal data.
+  - Upload data to our huggingface? Then, I will format them accordingly.
 - **Cost**:
   - Utilized my free credits so far.
 - **Additional Testing**:
