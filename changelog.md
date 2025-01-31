@@ -23,6 +23,13 @@
 - **Cost**:
   - Utilized my free credits so far.
 - **Additional Testing**:
-  - Claude 3.5 Sonnet test?
+  - Claude 3.5 Sonnet test? Just select one.
   - If sample responses above are fine, will use WordNet-Affect and Subtlex-US for explanability of lexical use.
   - Then, will try prompting with instances.
+- **TODOs**:
+  - 2,000 (4 rules) --> 25,000 (5 rules): Does this make model performance better?
+  - Connect lexicon
+  
+## Jan 31 Update by CKJ
+- **Response Generation with Examples**: Not better than those without examples. Actually, at some points, they are worse, so we will keep prompts without examples.
+- **Lexical Processing**
