@@ -33,3 +33,15 @@
 ## Jan 31 Update by CKJ
 - **Response Generation with Examples**: Not better than those without examples. Actually, at some points, they are worse, so we will keep prompts without examples.
 - **Lexical Processing**
+
+## Feb 5 Update by CKJ
+- **Data Stats**: 2,124 questions from the legal dataset, 785 questions from the counseling dataset
+- **Added Validation Function**: double-check whether the rule is applied or not. may be helpful for evaluation
+- **Lexical Processing**: just used affective words from WordNet-Affect. will do finer-grained ones after testing
+- **Tested and Uploaded to HF**: check the response quality here: [30 samples](https://huggingface.co/datasets/cheonkamjeong/empathetic-legal-responses)
+- **Paper**: Dataset part developed
+- **Methodological Decision**: Decided to use identical questions across all rules rather than different question sets in order to:
+ - Enable direct comparison of rule effects on same questions
+ - Support more controlled ablation studies
+ - Allow analysis of rule interactions on identical content
+ - Provide better experimental control for reward model training
