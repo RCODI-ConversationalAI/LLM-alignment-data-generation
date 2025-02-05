@@ -40,8 +40,8 @@
 - **Lexical Processing**: just used affective words from WordNet-Affect. will do finer-grained ones after testing
 - **Tested and Uploaded to HF**: check the response quality here: [30 samples](https://huggingface.co/datasets/cheonkamjeong/empathetic-legal-responses)
 - **Paper**: Dataset part developed
-- **Methodological Decision**: Decided to use identical questions across all rules rather than different question sets in order to:
- - Enable direct comparison of rule effects on same questions
- - Support more controlled ablation studies
- - Allow analysis of rule interactions on identical content
- - Provide better experimental control for reward model training
+- **Methods**: Decided to use identical questions across all rules rather than different question sets in order to:
+  - Enable direct comparison of rule effects on same questions
+  - Support more controlled ablation studies
+  - Allow analysis of rule interactions on identical content
+  - Provide better experimental control for reward model training
