@@ -492,7 +492,7 @@ def main():
         test_mode = True  # Set to False for full dataset
         if test_mode:
             logger.info("Running in test mode with 30 questions")
-            questions = questions[:30]
+            questions = questions[:100]
             stats.total_questions = len(questions)
             stats.train_size = int(stats.total_questions * 0.8)
             stats.test_size = int(stats.total_questions * 0.2)

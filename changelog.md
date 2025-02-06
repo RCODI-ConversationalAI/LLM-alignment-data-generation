@@ -38,7 +38,7 @@
 - **Data Stats**: 2,124 questions from the legal dataset, 785 questions from the counseling dataset
 - **Added Validation Function**: double-check whether the rule is applied or not. may be helpful for evaluation
 - **Lexical Processing**: just used affective words from WordNet-Affect. will do finer-grained ones after testing
-- **Tested and Uploaded to HF**: check the response quality here: [30 samples](https://huggingface.co/datasets/cheonkamjeong/empathetic-legal-responses)
+- **Tested and Uploaded to HF**: check the response quality here: [100 questions; 500 responses](https://huggingface.co/datasets/cheonkamjeong/empathetic-legal-responses)
 - **Paper**: Dataset part developed
 - **Methods**: Decided to use identical questions across all rules rather than different question sets in order to:
   - Enable direct comparison of rule effects on same questions
