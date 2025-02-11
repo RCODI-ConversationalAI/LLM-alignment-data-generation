@@ -75,7 +75,6 @@ class Lexicon:
             df = pd.read_csv(filepath)
             words = df['lemma'].dropna().tolist()
             logger.info(f"Loaded {len(words)} words from lexicon")
-            # Debug: print first few words
             logger.debug(f"Sample words: {words[:10]}")
             return cls(words=words)
         except Exception as e:
@@ -86,14 +85,14 @@ class Lexicon:
         """Check if text contains words from the emotion lexicon."""
         text_lower = text.lower()
         text_words = set(text_lower.split())
-        # Debug: print matching words
+
         matches = [word for word in self.words if word in text_words]
         if matches:
             logger.debug(f"Found emotional words: {matches}")
         return bool(matches)
 
 class ResponseValidator:
-    """Validate responses against linguistic rules."""
+    """Validate responses against symbolic rules."""
     def __init__(self, lexicon: Optional[Lexicon] = None):
         """Initialize validator with optional lexicon."""
         self.lexicon = lexicon
@@ -119,14 +118,13 @@ class LegalResponseGenerator:
         self.api_key = api_key
         openai.api_key = api_key
 
-        # Initialize lexicon if path provided
         self.lexicon = Lexicon.from_csv(lexicon_path) if lexicon_path else None
         self.validator = ResponseValidator(self.lexicon)
 
         self._initialize_rules()
 
     def _initialize_rules(self):
-        """Initialize linguistic rules."""
+        """Initialize symbolic rules."""
         self.rules: Dict[str, Rule] = {
             "pronoun": Rule(
                 name="Personal Pronoun Rule",
@@ -442,7 +440,7 @@ def main():
         logger.info(f"Checking paths...")
         logger.info(f"Public data dir: {paths.public_data_dir}")
         logger.info(f"QA file: {paths.qa_file}")
-        logger.info(f"Lexicon path: {paths.data_dir / 'lexicon' / 'emotion_paths.csv'}")
+        logger.info(f"Lexicon path: {paths.data_dir / 'lexicon' / 'affective_words_high_freq.csv'}")
         
         # Validate paths
         if not paths.public_data_dir.exists():
@@ -451,7 +449,7 @@ def main():
             raise FileNotFoundError(f"QA file not found: {paths.qa_file}")
 
         # Check lexicon file
-        lexicon_path = paths.data_dir / "lexicon" / "emotion_paths.csv"
+        lexicon_path = paths.data_dir / "lexicon" / "affective_words_high_freq.csv"
         if not lexicon_path.exists():
             raise FileNotFoundError(f"Lexicon file not found: {lexicon_path}")
         
@@ -488,7 +486,6 @@ def main():
             logger.info("Operation cancelled by user")
             return
 
-        # For testing with 30 questions
         test_mode = True  # Set to False for full dataset
         if test_mode:
             logger.info("Running in test mode with 30 questions")

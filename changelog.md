@@ -38,10 +38,17 @@
 - **Data Stats**: 2,124 questions from the legal dataset, 785 questions from the counseling dataset
 - **Added Validation Function**: double-check whether the rule is applied or not. may be helpful for evaluation
 - **Lexical Processing**: just used affective words from WordNet-Affect. will do finer-grained ones after testing
-- **Tested and Uploaded to HF**: check the response quality here: [100 questions; 500 responses](https://huggingface.co/datasets/cheonkamjeong/empathetic-legal-responses)
+- **Tested and Uploaded to HF**: check the response quality here: [100 questions; 500 responses](https://huggingface.co/datasets/cheonkamjeong/empathetic-legal-responses-test)
 - **Paper**: Dataset part developed
 - **Methods**: Decided to use identical questions across all rules rather than different question sets in order to:
   - Enable direct comparison of rule effects on same questions
   - Support more controlled ablation studies
   - Allow analysis of rule interactions on identical content
   - Provide better experimental control for reward model training
+
+## Feb 10-11 Update by CKJ
+- **Batch Processing**: Implemented two versions – **asynchronous processing** and **sequential batch execution** (encountered connection errors due to quota limits, so made a sequential version as well. If quota limits are fixed, will try asynchronous processing again. Estimated time: around 1 hour). Will apply the same process to the counseling data after completing this.
+- **Lexical Processing**: Integrated **WordNet-Affect** and **WordNet synsets**, incorporating **frequency data from SUBTLEX-US** to filter for **high-frequency items only**.
+- **Issues**: Encountered **quota limitations** affecting API usage.
+- **Workflow**: Running **UCI server tests** while generating data. Testing the **reward model** on the server. Conducting a **fine-tuning test** with **100 sample data**.
+- **Your TODOs**: Check **quota limitations**. Conduct **Gilbreth server testing** with the sample data.
