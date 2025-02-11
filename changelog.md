@@ -47,8 +47,8 @@
   - Provide better experimental control for reward model training
 
 ## Feb 10-11 Update by CKJ
-- **Batch Processing**: Implemented two versions – **asynchronous processing** and **sequential batch execution** (encountered connection errors due to quota limits, so made a sequential version as well. If quota limits are fixed, will try asynchronous processing again. Estimated time: around 1 hour). Will apply the same process to the counseling data after completing this.
-- **Lexical Processing**: Integrated **WordNet-Affect** and **WordNet synsets**, incorporating **frequency data from SUBTLEX-US** to filter for **high-frequency items only**.
+- **Batch Processing**: Implemented two versions – [**asynchronous processing**](https://github.com/RCODI-ConversationalAI/LLM-alignment-data-generation/blob/main/scripts/generate_legal_responses_async.py) and [**sequential batch execution**](https://github.com/RCODI-ConversationalAI/LLM-alignment-data-generation/blob/main/scripts/generate_legal_responses_seq.py) (encountered connection errors due to quota limits, so made a sequential version as well. If quota limits are fixed, will try asynchronous processing again. Estimated time: around 1 hour). Will apply the same process to the counseling data after completing this.
+- **Lexical Processing** ([affective parser here](https://github.com/RCODI-ConversationalAI/LLM-alignment-data-generation/blob/main/scripts/affective_parser.py)): Integrated **WordNet-Affect** and **WordNet synsets**, incorporating **frequency data from SUBTLEX-US** to filter for **high-frequency items only**.
 - **Issues**: Encountered **quota limitations** affecting API usage.
 - **Workflow**: Running **UCI server tests** while generating data. Testing the **reward model** on the server. Conducting a **fine-tuning test** with **100 sample data**.
 - **Your TODOs**: Check **quota limitations**. Conduct **Gilbreth server testing** with the sample data.
