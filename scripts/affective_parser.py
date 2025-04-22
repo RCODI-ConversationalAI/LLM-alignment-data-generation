@@ -1,3 +1,7 @@
+# This script is to extract affective words from WordNet and their frequency information from Subtlex-US.
+# Updated on 04/15/2025
+# If you have any questions, email to Cheonkam Jeong (cheonkamjeong@gmail.com)
+
 import xml.etree.ElementTree as ET
 from nltk.corpus import wordnet as wn
 from collections import defaultdict
